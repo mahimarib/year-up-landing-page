@@ -419,8 +419,8 @@ footer a {
 footer .container {
     max-width: 1100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    column-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap: 2em;
 }
 
 .link_section {
@@ -454,4 +454,10 @@ a.first_link,
 
 .link_section .small_links {
     grid-row: 3 / span 1;
+}
+
+.socials {
+    margin-top: 1em;
+    display: flex;
+    column-gap: 1em;
 }
