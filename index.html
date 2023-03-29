@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Year Up</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,7 +41,7 @@
                 src="assets/header_img.jpg"
                 alt="woman typing on laptop"
             />
-            <main>
+            <div class="header_main">
                 <h1 class="big_text">
                     Learn new skills to launch your career.
                 </h1>
@@ -49,7 +50,7 @@
                     access to today's best companies and a proven path to career
                     success.
                 </p>
-                <form action="">
+                <form>
                     <input
                         class="form_input"
                         type="text"
@@ -63,7 +64,7 @@
                         value="find training"
                     />
                 </form>
-            </main>
+            </div class="header_main">
         </header>
         <main>
             <section id="approach">
@@ -171,8 +172,10 @@
                                 src="assets/headshot-1.jpg"
                                 alt="alumni portrait"
                             />
-                            <h3>Jane Doe</h3>
-                            <p>Data Coordinator, ASPCA</p>
+                            <div class="title">
+                                <h3>Jane Doe</h3>
+                                <p>Data Coordinator, ASPCA</p>
+                            </div>
                         </div>
                         <blockquote>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -187,8 +190,10 @@
                                 src="assets/headshot-2.jpg"
                                 alt="alumni portrait"
                             />
-                            <h3>Jane Doe</h3>
-                            <p>Business Analyst, Salesforce</p>
+                            <div class="title">
+                                <h3>Jane Doe</h3>
+                                <p>Business Analyst, Salesforce</p>
+                            </div>
                         </div>
                         <blockquote>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -203,8 +208,10 @@
                                 src="assets/headshot-3.jpg"
                                 alt="alumni portrait"
                             />
-                            <h3>John Doe</h3>
-                            <p>Operations Technician, Amazon</p>
+                            <div class="title">
+                                <h3>John Doe</h3>
+                                <p>Operations Technician, Amazon</p>
+                            </div>
                         </div>
                         <blockquote>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -215,10 +222,10 @@
                 </div>
             </section>
         </main>
-        <section id="find-training">
+        <section id="find_training">
             <div class="container">
                 <h1 class="big_text">Explore training paths near you</h1>
-                <form action="">
+                <form>
                     <input
                         class="form_input"
                         type="text"

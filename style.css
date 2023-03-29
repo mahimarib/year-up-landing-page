@@ -2,6 +2,9 @@
     margin: 0;
     box-sizing: border-box;
     /* outline: 1px dotted magenta; */
+}
+
+:root {
     --body-padding: 6em;
     --blue: #0354a0;
     --yellow: #de9c19;
@@ -92,11 +95,11 @@ input[type='button'] {
 }
 
 .button {
+    /* display: inline-block; */
     color: white;
     padding: 1em 1.2em;
     text-decoration: none;
     border: none;
-    height: 42px;
     border-radius: 5px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -122,16 +125,6 @@ input[type='button'] {
     display: none;
 }
 
-@media screen and (max-width: 1100px) {
-    nav li {
-        display: none;
-    }
-
-    .menu_icon {
-        display: block;
-    }
-}
-
 header {
     background-color: var(--blue);
     position: relative;
@@ -141,7 +134,7 @@ header {
     display: grid;
     padding: 0 var(--body-padding);
     grid-template-columns: 1fr minmax(auto, 1100px) 1fr;
-    grid-template-rows: 8em auto 8em;
+    grid-template-rows: 1fr;
     align-items: center;
 }
 
@@ -153,19 +146,19 @@ header {
     filter: brightness(70%);
 }
 
-header main {
+.header_main {
     width: 65%;
     grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
     z-index: 1;
 }
 
 header h1 {
     color: white;
+    margin: 0;
 }
 
 .big_text {
-    font-size: 4em;
+    font-size: 4rem;
     line-height: 0.9em;
     margin-bottom: 0.7em;
 }
@@ -177,21 +170,30 @@ header p {
     margin-bottom: 2em;
 }
 
-.form_input {
+form {
+    display: flex;
+    align-items: stretch;
+}
+
+form > * {
+    display: block;
+}
+
+input[type='text'] {
+    display: block;
     padding: 1em 1.2em;
-    height: 42px;
     border: none;
     border-radius: 5px;
     margin-right: 0.5em;
     letter-spacing: 1.5px;
 }
 
-form_input:focus {
+input[type='text']:focus {
     outline: 1px solid var(--yellow);
 }
 
 header a {
-    height: 42px;
+    height: 2.6em;
     font-size: 1em;
 }
 
@@ -310,7 +312,7 @@ section .big_text {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    row-gap: 2em;
+    gap: 3em 3em;
 }
 
 #intern .container div {
@@ -352,8 +354,7 @@ section .big_text {
 }
 
 .headshot {
-    width: 200px;
-    height: 200px;
+    width: 100%;
     border-radius: 50%;
     display: block;
     border: 0.5em solid white;
@@ -389,20 +390,20 @@ section .big_text {
     text-align: center;
 }
 
-#find-training {
+#find_training {
     padding: 0.5em var(--body-padding);
     background-color: #f5f5f5;
 }
 
-#find-training .container {
+#find_training .container {
     max-width: 1100px;
 }
 
-#find-training form {
+#find_training form {
     margin: 4em 0 2em 0;
 }
 
-#find-training input[type='text'] {
+#find_training input[type='text'] {
     border: 1px solid #ddd;
     width: 60%;
 }
@@ -461,4 +462,116 @@ a.first_link,
     margin-top: 2em;
     display: flex;
     column-gap: 1em;
+}
+
+@media screen and (max-width: 1100px) {
+    nav li {
+        display: none;
+    }
+
+    .menu_icon {
+        display: block;
+    }
+
+    nav .container {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header_main .big_text {
+        font-size: 3em;
+    }
+
+    .header_main p {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #intern .container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header_main {
+        width: 100%;
+    }
+
+    #testimonials .about {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 1em;
+        width: 100%;
+        bottom: auto;
+        top: -1.5rem;
+        left: 0;
+        padding: 0 2em;
+    }
+
+    #testimonials .card .about .title > * {
+        text-align: left;
+    }
+
+    #testimonials .card {
+        grid-template-rows: 50px 1fr;
+        row-gap: 1em;
+    }
+
+    #testimonials blockquote {
+        grid-column: 1 / span 2;
+        grid-row: 2 / -1;
+    }
+
+    .headshot {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    nav,
+    header,
+    body > main,
+    #find_training,
+    footer {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    footer .container {
+        justify-items: center;
+        margin: 2em auto;
+        place-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    footer .container .link_section {
+        width: 100%;
+        justify-items: center;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form {
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    form > input {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    #testimonials .about {
+        top: -0.8rem;
+    }
+
+    #find_training input[type='text'] {
+        width: 100%;
+    }
 }
