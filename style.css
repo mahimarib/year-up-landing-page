@@ -86,11 +86,17 @@ nav .menu_icon img {
     right: 0;
 }
 
+input[type='button'] {
+    -webkit-appearance: none;
+    border-radius: 5px;
+}
+
 .button {
     color: white;
     padding: 1em 1.2em;
     text-decoration: none;
     border: none;
+    height: 42px;
     border-radius: 5px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -127,6 +133,7 @@ nav .menu_icon img {
 }
 
 header {
+    background-color: var(--blue);
     position: relative;
     width: 100%;
     height: 100vh;
@@ -144,13 +151,13 @@ header {
     height: 100%;
     object-fit: cover;
     filter: brightness(70%);
-    z-index: -1;
 }
 
 header main {
     width: 65%;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    z-index: 1;
 }
 
 header h1 {
@@ -412,14 +419,14 @@ footer a {
 footer .container {
     max-width: 1100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     column-gap: 1em;
 }
 
 .link_section {
     max-width: 200px;
     display: grid;
-    grid-template-rows: 3em 3em;
+    grid-template-rows: 3em 2em;
     grid-auto-rows: max-content;
     height: 100%;
 }
