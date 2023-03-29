@@ -352,7 +352,8 @@ section .big_text {
 }
 
 .headshot {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     display: block;
     border: 0.5em solid white;
