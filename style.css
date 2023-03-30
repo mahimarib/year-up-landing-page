@@ -226,17 +226,33 @@ section .big_text {
 }
 
 .approach_card {
-    padding: 3em 2em;
-    min-width: 200px;
-    max-width: 300px;
+    max-width: 500px;
     box-shadow: var(--shadow);
     border-radius: 20px;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+    grid-auto-rows: max-content;
+}
+
+.approach_card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1/2;
+}
+
+.approach_card .text {
+    grid-row: 2/-1;
+    padding: 2em;
 }
 
 .approach_card h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
 }
 
 .approach_card span {
@@ -525,6 +541,17 @@ a.first_link,
     .headshot {
         width: 100px;
         height: 100px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .approach_card {
+        grid-template-rows: 150px;
+    }
+
+    .approach_card .text {
+        /* padding: 1em 1.2em; */
+        font-size: 0.9em;
     }
 }
 
