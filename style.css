@@ -251,6 +251,7 @@ section .big_text {
 }
 
 .approach_card h1 {
+    color: var(--blue);
     font-size: 1.5em;
     margin-bottom: 0.8em;
 }
