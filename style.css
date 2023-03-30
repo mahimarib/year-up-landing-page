@@ -247,7 +247,7 @@ section .big_text {
 
 .approach_card .text {
     grid-row: 2/-1;
-    padding: 2em;
+    padding: 1.5em 2em 2em 2em;
 }
 
 .approach_card h1 {
