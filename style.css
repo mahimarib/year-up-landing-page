@@ -78,7 +78,7 @@ nav .menu_icon img {
     position: relative;
 }
 
-.nav_link:hover::after {
+.nav_link::after {
     content: '';
     position: absolute;
     background-color: white;
@@ -87,6 +87,13 @@ nav .menu_icon img {
     border-radius: 1px;
     left: 0;
     right: 0;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.nav_link:hover::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
 }
 
 input[type='button'] {
